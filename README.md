@@ -2,11 +2,17 @@
 
 Just a small php client to interact with gpt-stuff
 
-## caution
+## Caution
 
 This is a very early version of this client. It is not tested and not ready for production. Use at your own risk.
 
-## usage
+## Installation
+
+```bash
+composer require teevee/php-gpt-client
+```
+
+## Usage
 
 ### ask for models
 
