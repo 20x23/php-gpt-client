@@ -30,12 +30,13 @@ declare(strict_types=1);
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 use TeeV\GptClient\Api\Gpt;
+use TeeV\GptClient\HttpClient\ConnectionException;
 
 try {
   $client = new Gpt('sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
   $result = $client->getModels();
   var_dump($result);
-} catch (TeeV\GptClient\HttpClient\ConnectionException $e) {
+} catch (ConnectionException $e) {
   echo 'Error: ', $e->getMessage(), PHP_EOL;
 }
 ```
