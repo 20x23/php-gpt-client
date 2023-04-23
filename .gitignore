@@ -4,3 +4,4 @@ tmp
 composer.phar
 .phpunit.cache
 phpunit.xml
+psalm.xml
