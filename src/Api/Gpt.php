@@ -5,12 +5,16 @@ namespace TeeV\GptClient\Api;
 
 use TeeV\GptClient\HttpClient\ConnectionException;
 use TeeV\GptClient\HttpClient\Request;
+use TeeV\GptClient\HttpClient\RequestInterface;
 use TeeV\GptClient\HttpClient\Response;
 use function sprintf;
 
 class Gpt
 {
-    public function __construct(private readonly string $token)
+    public function __construct(
+        private readonly string           $token,
+        private readonly RequestInterface $request = new Request()
+    )
     {
     }
 
@@ -20,7 +24,7 @@ class Gpt
      */
     public function getModels(): Response
     {
-        return (new Request())->get(
+        return $this->request->get(
             'https://api.openai.com/v1/models',
             [],
             [
@@ -38,7 +42,7 @@ class Gpt
     public function chat(ChatParams $params): Result
     {
         return Result::fromJson(
-            (new Request())->post(
+            $this->request->post(
                 'https://api.openai.com/v1/chat/completions',
                 $params->getParams(),
                 [
