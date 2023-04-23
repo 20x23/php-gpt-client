@@ -5,6 +5,6 @@ namespace TeeV\GptClient\HttpClient;
 
 use Exception;
 
-class ConnectionException extends Exception
+final class ConnectionException extends Exception
 {
 }
