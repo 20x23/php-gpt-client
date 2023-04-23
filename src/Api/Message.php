@@ -7,8 +7,7 @@ class Message
   public function __construct(
     private readonly Role    $role,
     private readonly string  $content,
-    private readonly ?string $name = null
-  )
+    private readonly ?string $name = null)
   {
   }
 

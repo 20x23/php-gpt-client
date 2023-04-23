@@ -19,7 +19,7 @@ use const CURLOPT_RETURNTRANSFER;
 use const CURLOPT_TIMEOUT;
 use const CURLOPT_URL;
 
-class Request
+final class Request implements RequestInterface
 {
   private CurlHandle $curl;
 

@@ -6,8 +6,7 @@ class ChatParams
 {
   public function __construct(
     private readonly string $model,
-    private readonly array  $messages,
-  )
+    private readonly array  $messages)
   {
   }
 
