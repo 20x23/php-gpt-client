@@ -2,3 +2,5 @@ vendor
 .idea
 tmp
 composer.phar
+.phpunit.cache
+phpunit.xml
