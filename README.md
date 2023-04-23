@@ -25,10 +25,6 @@ composer require teevee/php-gpt-client
 
 ```php
 <?php
-declare(strict_types=1);
-
-require dirname(__DIR__) . '/vendor/autoload.php';
-
 use TeeV\GptClient\Api\Gpt;
 use TeeV\GptClient\HttpClient\ConnectionException;
 

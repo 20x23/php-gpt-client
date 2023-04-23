@@ -11,7 +11,7 @@ class MessageTest extends TestCase
     {
         $message = new Message(Role::USER, 'hello', 'John Doe');
         $this->assertSame([
-            'role' => 'user',
+            'role' => Role::USER->value,
             'content' => 'hello',
             'name' => 'John Doe',
         ], $message->getMessage());
