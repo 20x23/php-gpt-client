@@ -4,17 +4,21 @@ declare(strict_types=1);
 namespace TeeV\GptClient\Api;
 class ChatParams
 {
-  public function __construct(
-    private readonly string $model,
-    private readonly array  $messages)
-  {
-  }
+    /**
+     * @param string $model
+     * @param list<Message> $messages
+     */
+    public function __construct(
+        private readonly string $model,
+        private readonly array  $messages)
+    {
+    }
 
-  public function getParams(): array
-  {
-    return [
-      'model' => $this->model,
-      'messages' => $this->messages
-    ];
-  }
+    public function getParams(): array
+    {
+        return [
+            'model' => $this->model,
+            'messages' => $this->messages
+        ];
+    }
 }

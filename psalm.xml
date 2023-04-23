@@ -9,7 +9,7 @@
 >
     <projectFiles>
         <directory name="src"/>
-        <directory name="tmp"/>
+        <directory name="examples"/>
         <ignoreFiles>
             <directory name="vendor"/>
         </ignoreFiles>
