@@ -18,7 +18,10 @@ class ChatParams
     {
         return [
             'model' => $this->model,
-            'messages' => $this->messages
+            'messages' => array_map(
+                fn(Message $message) => $message->asArray(),
+                $this->messages
+            )
         ];
     }
 }

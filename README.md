@@ -47,7 +47,7 @@ try {
         new ChatParams(
             'gpt-3.5-turbo',
             [
-                (new Message(Role::USER, 'Can you here me?'))->getMessage(),
+                (new Message(Role::USER, 'Can you here me?')),
             ]
         )
     );

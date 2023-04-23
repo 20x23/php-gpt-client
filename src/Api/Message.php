@@ -11,7 +11,7 @@ class Message
     {
     }
 
-    public function getMessage(): array
+    public function asArray(): array
     {
         $message = [
             'role' => $this->role->value,

@@ -21,8 +21,8 @@ try {
                 (new Message(
                     Role::SYSTEM,
                     'You are super happy because the sun is shining and tell everyone who asks you how you are doing')
-                )->getMessage(),
-                (new Message(Role::USER, 'How are you?'))->getMessage(),
+                ),
+                (new Message(Role::USER, 'How are you?')),
             ]
         )
     );

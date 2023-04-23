@@ -14,6 +14,6 @@ class MessageTest extends TestCase
             'role' => Role::USER->value,
             'content' => 'hello',
             'name' => 'John Doe',
-        ], $message->getMessage());
+        ], $message->asArray());
     }
 }
