@@ -11,6 +11,9 @@ use function sprintf;
 
 class Gpt
 {
+    const BASE_URL = 'https://api.openai.com/v1';
+
+
     public function __construct(
         private readonly string           $token,
         private readonly RequestInterface $request = new Request()
@@ -25,7 +28,7 @@ class Gpt
     public function getModels(): Response
     {
         return $this->request->get(
-            'https://api.openai.com/v1/models',
+            sprintf('%s/models', self::BASE_URL),
             [],
             [
                 $this->getAuthHeader()
@@ -43,7 +46,7 @@ class Gpt
     {
         return Result::fromJson(
             $this->request->post(
-                'https://api.openai.com/v1/chat/completions',
+                sprintf('%s/chat/completions', self::BASE_URL),
                 $params->getParams(),
                 [
                     $this->getAuthHeader(),
