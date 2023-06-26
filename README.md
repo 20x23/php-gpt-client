@@ -16,7 +16,7 @@ It is also not an official client.
 ## Installation
 
 ```bash
-composer require teevee/php-gpt-client
+composer require teev/php-gpt-client
 ```
 
 ## Usage
